@@ -1,18 +1,18 @@
 {% set name = "readerwriterlock" %}
-{% set version = "1.0.9" %}
+{% set version = "1.0.10" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/readerwriterlock-{{ version }}.tar.gz
-  sha256: b7c4cc003435d7a8ff15b312b0a62a88d9800ba6164af88991f87f8b748f9bea
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/readerwriterlock-{{ version }}.tar.gz
+  sha256: d0e803d17569f70700137cd91c4219d2bae718794a1b0da9fd44eb189e58786d
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
